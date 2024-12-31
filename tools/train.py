@@ -58,7 +58,7 @@ def parse_args():
 
 
 def main():
-    setproctitle('jooyoung-jang')
+    setproctitle('shcho_mmdetection_test')
     args = parse_args()
 
     # Reduce the number of repeated compilations and improve

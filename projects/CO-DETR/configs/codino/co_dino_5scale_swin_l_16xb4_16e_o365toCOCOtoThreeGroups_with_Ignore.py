@@ -7,7 +7,7 @@ loss_lambda = 2.0
 num_classes = 3
 batch_size = 1
 dataset_type = 'ThreeGroupDataset'
-exp_name= 'three_groups_32k_with_ignore'
+exp_name= 'shcho_three_groups_32k_with_ignore_test'
 # model settings
 model = dict(
     backbone=dict(
@@ -157,8 +157,8 @@ train_dataloader = dict(
     dataset=dict(
         type=dataset_type,
         pipeline=train_pipeline,
-        ann_file='/data/miricanvas-ai-labs-official/02.Dataset/01.Find-meaning-groups/01.miricanvas/PPT-template_ko/three_groups_32k_with_ignore_train.json',
-        data_prefix=dict(img='/data/miricanvas-ai-labs-official/02.Dataset/01.Find-meaning-groups/01.miricanvas/PPT-template_ko/decorate_detection/Raw/originSize_png/')))
+        ann_file='/data/shcho/mmdetection_data/json/three_groups_32k_with_ignore_train.json',
+        data_prefix=dict(img='/data/shcho/mmdetection_data/originSize_png/')))
 
 test_pipeline = [
     dict(type='LoadImageFromFile'),
@@ -175,11 +175,11 @@ val_dataloader = dict(
     dataset=dict(
         type=dataset_type,
         pipeline=test_pipeline,
-        ann_file='/data/miricanvas-ai-labs-official/02.Dataset/01.Find-meaning-groups/01.miricanvas/PPT-template_ko/three_groups_32k_with_ignore_val.json',
-        data_prefix=dict(img='/data/miricanvas-ai-labs-official/02.Dataset/01.Find-meaning-groups/01.miricanvas/PPT-template_ko/decorate_detection/Raw/originSize_png/')))
+        ann_file='/data/shcho/mmdetection_data/json/three_groups_32k_with_ignore_val.json',
+        data_prefix=dict(img='/data/shcho/mmdetection_data/originSize_png/')))
 
 test_dataloader = val_dataloader
-val_evaluator = dict(ann_file='/data/miricanvas-ai-labs-official/02.Dataset/01.Find-meaning-groups/01.miricanvas/PPT-template_ko/three_groups_32k_with_ignore_val.json')
+val_evaluator = dict(ann_file='/data/shcho/mmdetection_data/json/three_groups_32k_with_ignore_val.json')
 test_evaluator = val_evaluator
 optim_wrapper = dict(optimizer=dict(lr=1e-4))
 
@@ -220,5 +220,5 @@ visualizer = dict(
     type='DetLocalVisualizer',
     vis_backends=vis_backends)
     
-work_dir = '/data/checkpoints/jjy/three_groups_swin_l_b4_16e_32k_with_ignore'
+work_dir = '/data/shcho/mmdetection_data/checkpoints/three_groups_swin_l_b4_16e_32k_with_ignore'
 

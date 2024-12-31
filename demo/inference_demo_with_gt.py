@@ -138,7 +138,7 @@ def parse_args():
 
 
 def main():
-    setproctitle('jooyoung-jang')
+    setproctitle('shcho_mmdetection_test')
     init_args, call_args = parse_args()
     inferencer = DetInferencer(**init_args)
 
@@ -150,14 +150,14 @@ def main():
     table = wandb.Table(columns=["Index", "Visualization", "Ground Truth"])
 
     if int(os.environ.get('LOCAL_RANK', 0)) == 0:
-        wandb.init(project='decorate_detection', entity='miridih-ailabs', name=f'evaluate_{init_args["model"]}_{init_args["weights"]}')
+        wandb.init(project='decorate_detection', entity='miridih-ailabs', name=f'shcho_evaluate_{init_args["model"]}_{init_args["weights"]}')
     
     result_dict, gt_dict = [], []
     # Handle multiple image inputs from COCO JSON
     if isinstance(call_args['inputs'], list):
         for idx, image_path in enumerate(call_args['inputs']):
-            # if idx > 150:
-            #     break
+            if idx > 400:
+                break
             call_args['inputs'] = image_path
             output_dict = inferencer(**call_args)
 

@@ -36,6 +36,7 @@ from .xml_style import XMLDataset
 from .youtube_vis_dataset import YouTubeVISDataset
 from .three_groups import ThreeGroupDataset
 from .decorate_detection import DecorateDetectionDataset
+from .three_groups_integrated import SingleGroupDataset
 
 __all__ = [
     'XMLDataset', 'CocoDataset', 'DeepFashionDataset', 'VOCDataset',
@@ -51,7 +52,7 @@ __all__ = [
     'BaseSegDataset', 'ADE20KSegDataset', 'CocoSegDataset',
     'ADE20KInstanceDataset', 'iSAIDDataset', 'V3DetDataset', 'ConcatDataset',
     'ODVGDataset', 'MDETRStyleRefCocoDataset', 'DODDataset',
-    'CustomSampleSizeSampler', 'Flickr30kDataset', 'ThreeGroupDataset',
+    'CustomSampleSizeSampler', 'Flickr30kDataset', 'ThreeGroupDataset', 'SingleGroupDataset',
     'DecorateDetectionDataset'
 ]
 
