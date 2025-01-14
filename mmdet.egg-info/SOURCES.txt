@@ -1093,6 +1093,7 @@ mmdet/datasets/openimages.py
 mmdet/datasets/refcoco.py
 mmdet/datasets/reid_dataset.py
 mmdet/datasets/three_groups.py
+mmdet/datasets/three_groups_integrated.py
 mmdet/datasets/utils.py
 mmdet/datasets/v3det.py
 mmdet/datasets/voc.py
