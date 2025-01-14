@@ -25,8 +25,8 @@ This project provides tools for extracting embeddings and calculating similarity
 
 To extract embeddings from images, use the following command:
 
-- **`/data/decoreted/test`**: Path to the directory containing the images for which embeddings need to be extracted.
-- **`/data/ckpt_codetr/epoch_15.pth`**: Path to the pre-trained model checkpoint.
+- **`/data/decoreted/test`**: Path to the directory containing the images for which embeddings need to be extracted. Change it to your own directory.
+- **`/data/ckpt_codetr/epoch_16.pth`**: Path to the pre-trained model checkpoint. Do not change it untill the new model is released.
 - **`--out-dir /data/sample_results`**: Directory where the extracted embeddings will be saved.
 
 ### Similarity Calculation
