@@ -29,9 +29,13 @@ To extract embeddings from images, use the following command:
 - **`/data/ckpt_codetr/epoch_16.pth`**: Path to the pre-trained model checkpoint. Do not change it untill the new model is released.
 - **`--out-dir /data/sample_results`**: Directory where the extracted embeddings will be saved.
 
+CUDA_VISIBLE_DEVICES=0 python demo/inference_demo.py /data/decoreted/test /data/ckpt_codetr/epoch_16.pth --out-dir /data/sample_results
+
 ### Similarity Calculation
 
 To calculate similarity scores between images, run:
+
+CUDA_VISIBLE_DEVICES=0 python demo/cal_sim_score.py
 
 
 This script will compute similarity scores for a set of target images against all other images in the specified directory and save the results in JSON format.
